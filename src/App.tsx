@@ -54,9 +54,12 @@ const App: React.FC = () => {
                         </p>
                       </div>
                       <div className="flex flex-wrap gap-4">
-                        <a href="#download" className="btn-primary">
+                        <Link
+                          to="/download"
+                          className="btn-primary"
+                        >
                           Download App
-                        </a>
+                        </Link>
                         <a href="#features" className="btn-secondary">
                           Learn More
                         </a>
@@ -411,7 +414,7 @@ const App: React.FC = () => {
                   {/* Funds */}
                   <div className="mb-16">
                     <h3 className="text-2xl font-semibold mb-8 text-neutral-900 dark:text-white text-center">FUNDS</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                       {[
                         { name: '21e8 Capital', twitter: '21e8Capital' },
                         { name: 'Apollo Capital', twitter: 'ApolloCryptoAu' },
@@ -427,20 +430,21 @@ const App: React.FC = () => {
                         { name: 'Master Ventures', twitter: 'buildwithMV' }
                       ].map((fund) => (
                         <div key={fund.name} className="group">
-                          <div className="relative aspect-square rounded-lg overflow-hidden bg-white dark:bg-neutral-800 shadow-md hover:shadow-lg transition-all duration-300">
-                            <img
-                              src={`https://unavatar.io/twitter/${fund.twitter}`}
-                              alt={fund.name}
-                              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-                              <div className="text-white">
-                                <h4 className="font-medium text-sm">{fund.name}</h4>
-                                <a href={`https://twitter.com/${fund.twitter}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">
-                                  @{fund.twitter}
-                                </a>
-                              </div>
+                          <div className="relative w-24 h-24 mx-auto mb-10">
+                            <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                            <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white dark:border-neutral-800 shadow-lg">
+                              <img
+                                src={`https://unavatar.io/twitter/${fund.twitter}`}
+                                alt={fund.name}
+                                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                              />
                             </div>
+                          </div>
+                          <div className="text-center">
+                            <h4 className="text-sm font-medium text-neutral-900 dark:text-white truncate">{fund.name}</h4>
+                            <a href={`https://twitter.com/${fund.twitter}`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400">
+                              @{fund.twitter}
+                            </a>
                           </div>
                         </div>
                       ))}
@@ -450,7 +454,7 @@ const App: React.FC = () => {
                   {/* Industry Leading Investors */}
                   <div className="mb-16">
                     <h3 className="text-2xl font-semibold mb-8 text-neutral-900 dark:text-white text-center">INDUSTRY LEADING INVESTORS</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                       {[
                         { name: 'JPTHOR', twitter: 'jpthor' },
                         { name: 'Perklin', twitter: 'mperklin' },
@@ -460,20 +464,21 @@ const App: React.FC = () => {
                         { name: 'Vik', twitter: 'vikrantnyc' }
                       ].map((investor) => (
                         <div key={investor.name} className="group">
-                          <div className="relative aspect-square rounded-lg overflow-hidden bg-white dark:bg-neutral-800 shadow-md hover:shadow-lg transition-all duration-300">
-                            <img
-                              src={`https://unavatar.io/twitter/${investor.twitter}`}
-                              alt={investor.name}
-                              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-                              <div className="text-white">
-                                <h4 className="font-medium text-sm">{investor.name}</h4>
-                                <a href={`https://twitter.com/${investor.twitter}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">
-                                  @{investor.twitter}
-                                </a>
-                              </div>
+                          <div className="relative w-24 h-24 mx-auto mb-10">
+                            <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                            <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white dark:border-neutral-800 shadow-lg">
+                              <img
+                                src={`https://unavatar.io/twitter/${investor.twitter}`}
+                                alt={investor.name}
+                                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                              />
                             </div>
+                          </div>
+                          <div className="text-center">
+                            <h4 className="text-sm font-medium text-neutral-900 dark:text-white truncate">{investor.name}</h4>
+                            <a href={`https://twitter.com/${investor.twitter}`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400">
+                              @{investor.twitter}
+                            </a>
                           </div>
                         </div>
                       ))}
@@ -483,7 +488,7 @@ const App: React.FC = () => {
                   {/* KOLs */}
                   <div>
                     <h3 className="text-2xl font-semibold mb-8 text-neutral-900 dark:text-white text-center">KOLs</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                       {[
                         { name: 'THORTrades', twitter: 'ThorTrades8' },
                         { name: 'Coach Bruce', twitter: 'OX_DAO' },
@@ -496,20 +501,21 @@ const App: React.FC = () => {
                         { name: 'Tyler Reynolds', twitter: 'tbr90' }
                       ].map((kol) => (
                         <div key={kol.name} className="group">
-                          <div className="relative aspect-square rounded-lg overflow-hidden bg-white dark:bg-neutral-800 shadow-md hover:shadow-lg transition-all duration-300">
-                            <img
-                              src={`https://unavatar.io/twitter/${kol.twitter}`}
-                              alt={kol.name}
-                              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-                              <div className="text-white">
-                                <h4 className="font-medium text-sm">{kol.name}</h4>
-                                <a href={`https://twitter.com/${kol.twitter}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">
-                                  @{kol.twitter}
-                                </a>
-                              </div>
+                          <div className="relative w-24 h-24 mx-auto mb-10">
+                            <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                            <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white dark:border-neutral-800 shadow-lg">
+                              <img
+                                src={`https://unavatar.io/twitter/${kol.twitter}`}
+                                alt={kol.name}
+                                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                              />
                             </div>
+                          </div>
+                          <div className="text-center">
+                            <h4 className="text-sm font-medium text-neutral-900 dark:text-white truncate">{kol.name}</h4>
+                            <a href={`https://twitter.com/${kol.twitter}`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400">
+                              @{kol.twitter}
+                            </a>
                           </div>
                         </div>
                       ))}
