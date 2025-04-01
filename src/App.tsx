@@ -402,77 +402,79 @@ const App: React.FC = () => {
               </section>
 
               {/* Backed By Section */}
-              <section id="backed-by" className="py-24 bg-white dark:bg-neutral-900 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-primary-500/5 to-secondary-500/5"></div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                  <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                      <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-                        BACKED AND TRUSTED BY
-                      </span>
-                    </h2>
-                  </div>
-
+              <section className="py-20 bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-800">
+                <div className="container mx-auto px-4">
+                  <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                    BACKED AND TRUSTED BY
+                  </h2>
+                  
                   {/* Funds */}
-                  <div className="mb-20">
-                    <h3 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-12 text-center">
-                      FUNDS
-                    </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                  <div className="mb-16">
+                    <h3 className="text-2xl font-semibold mb-8 text-neutral-900 dark:text-white">FUNDS</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                       {[
-                        { name: '21e8 Capital', twitter: '@21e8Capital', image: 'https://ui-avatars.com/api/?name=21e8+Capital&background=0D9488&color=fff' },
-                        { name: 'Apollo Capital', twitter: '@ApolloCryptoAu', image: 'https://ui-avatars.com/api/?name=Apollo+Capital&background=0D9488&color=fff' },
-                        { name: 'Delphi Ventures', twitter: '@Delphi_Ventures', image: 'https://ui-avatars.com/api/?name=Delphi+Ventures&background=0D9488&color=fff' },
-                        { name: 'Wintermute Ventures', twitter: 'wintermute-ventures', image: 'https://ui-avatars.com/api/?name=Wintermute&background=0D9488&color=fff' },
-                        { name: 'Danxia Capital', twitter: '@Danxia_Capital', image: 'https://ui-avatars.com/api/?name=Danxia+Capital&background=0D9488&color=fff' },
-                        { name: 'Banter Capital', twitter: 'Banter Capital', image: 'https://ui-avatars.com/api/?name=Banter+Capital&background=0D9488&color=fff' },
-                        { name: 'Proof Group', twitter: '@njess', image: 'https://ui-avatars.com/api/?name=Proof+Group&background=0D9488&color=fff' },
-                        { name: 'Thunderbolt', twitter: '@*', image: 'https://ui-avatars.com/api/?name=Thunderbolt&background=0D9488&color=fff' },
-                        { name: 'UpsideDAO', twitter: '@0xUpside', image: 'https://ui-avatars.com/api/?name=UpsideDAO&background=0D9488&color=fff' },
-                        { name: 'Magnet Capital', twitter: '@Magnet_Cap', image: 'https://ui-avatars.com/api/?name=Magnet+Capital&background=0D9488&color=fff' },
-                        { name: 'Kotti Capital', twitter: '@*', image: 'https://ui-avatars.com/api/?name=Kotti+Capital&background=0D9488&color=fff' },
-                        { name: 'Master Ventures', twitter: '@buildwithMV', image: 'https://ui-avatars.com/api/?name=Master+Ventures&background=0D9488&color=fff' },
+                        { name: '21e8 Capital', twitter: '21e8Capital' },
+                        { name: 'Apollo Capital', twitter: 'ApolloCryptoAu' },
+                        { name: 'Delphi Ventures', twitter: 'Delphi_Ventures' },
+                        { name: 'Wintermute Ventures', twitter: 'wintermute-ventures' },
+                        { name: 'Danxia Capital', twitter: 'Danxia_Capital' },
+                        { name: 'Banter Capital', twitter: 'BanterCapital' },
+                        { name: 'Proof Group', twitter: 'njess' },
+                        { name: 'Thunderbolt', twitter: 'Thunderbolt' },
+                        { name: 'UpsideDAO', twitter: '0xUpside' },
+                        { name: 'Magnet Capital', twitter: 'Magnet_Cap' },
+                        { name: 'Kotti Capital', twitter: 'KottiCapital' },
+                        { name: 'Master Ventures', twitter: 'buildwithMV' }
                       ].map((fund) => (
-                        <div key={fund.name} className="group bg-white dark:bg-neutral-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-primary-50 dark:hover:from-neutral-800 dark:hover:to-primary-900/10">
-                          <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-primary-100 dark:ring-primary-900/30 group-hover:ring-primary-200 dark:group-hover:ring-primary-800/50 transition-all duration-500">
+                        <div key={fund.name} className="group">
+                          <div className="relative aspect-square rounded-xl overflow-hidden bg-white dark:bg-neutral-800 shadow-lg hover:shadow-xl transition-all duration-300">
                             <img
-                              src={fund.image}
+                              src={`https://unavatar.io/twitter/${fund.twitter}`}
                               alt={fund.name}
-                              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                             />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                              <div className="text-white">
+                                <h4 className="font-semibold">{fund.name}</h4>
+                                <a href={`https://twitter.com/${fund.twitter}`} target="_blank" rel="noopener noreferrer" className="text-sm hover:underline">
+                                  @{fund.twitter}
+                                </a>
+                              </div>
+                            </div>
                           </div>
-                          <h4 className="font-semibold text-neutral-900 dark:text-white text-center group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">{fund.name}</h4>
-                          <p className="text-sm text-neutral-600 dark:text-neutral-300 text-center mt-2">{fund.twitter}</p>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   {/* Industry Leading Investors */}
-                  <div className="mb-20">
-                    <h3 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-12 text-center">
-                      INDUSTRY LEADING INVESTORS
-                    </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                  <div className="mb-16">
+                    <h3 className="text-2xl font-semibold mb-8 text-neutral-900 dark:text-white">INDUSTRY LEADING INVESTORS</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                       {[
-                        { name: 'JPTHOR', company: 'THORChain', twitter: '@jpthor', image: 'https://ui-avatars.com/api/?name=JPTHOR&background=0D9488&color=fff' },
-                        { name: 'Perklin', company: 'Shapeshift', twitter: '@mperklin', image: 'https://ui-avatars.com/api/?name=Perklin&background=0D9488&color=fff' },
-                        { name: 'LoiLui', company: 'Kyber', twitter: '@loi_luu', image: 'https://ui-avatars.com/api/?name=LoiLui&background=0D9488&color=fff' },
-                        { name: 'Marcel', company: 'THORWallet', twitter: '@marcelharmann', image: 'https://ui-avatars.com/api/?name=Marcel&background=0D9488&color=fff' },
-                        { name: 'Viktor', company: 'TrustWallet', twitter: '@Vikmeup', image: 'https://ui-avatars.com/api/?name=Viktor&background=0D9488&color=fff' },
-                        { name: 'Vik', company: 'CakeWallet', twitter: '@vikrantnyc', image: 'https://ui-avatars.com/api/?name=Vik&background=0D9488&color=fff' },
+                        { name: 'JPTHOR', twitter: 'jpthor' },
+                        { name: 'Perklin', twitter: 'mperklin' },
+                        { name: 'LoiLui', twitter: 'loi_luu' },
+                        { name: 'Marcel', twitter: 'marcelharmann' },
+                        { name: 'Viktor', twitter: 'Vikmeup' },
+                        { name: 'Vik', twitter: 'vikrantnyc' }
                       ].map((investor) => (
-                        <div key={investor.name} className="group bg-white dark:bg-neutral-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-primary-50 dark:hover:from-neutral-800 dark:hover:to-primary-900/10">
-                          <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-primary-100 dark:ring-primary-900/30 group-hover:ring-primary-200 dark:group-hover:ring-primary-800/50 transition-all duration-500">
+                        <div key={investor.name} className="group">
+                          <div className="relative aspect-square rounded-xl overflow-hidden bg-white dark:bg-neutral-800 shadow-lg hover:shadow-xl transition-all duration-300">
                             <img
-                              src={investor.image}
+                              src={`https://unavatar.io/twitter/${investor.twitter}`}
                               alt={investor.name}
-                              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                             />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                              <div className="text-white">
+                                <h4 className="font-semibold">{investor.name}</h4>
+                                <a href={`https://twitter.com/${investor.twitter}`} target="_blank" rel="noopener noreferrer" className="text-sm hover:underline">
+                                  @{investor.twitter}
+                                </a>
+                              </div>
+                            </div>
                           </div>
-                          <h4 className="font-semibold text-neutral-900 dark:text-white text-center group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">{investor.name}</h4>
-                          <p className="text-sm text-neutral-600 dark:text-neutral-300 text-center mt-1">{investor.company}</p>
-                          <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center mt-1">{investor.twitter}</p>
                         </div>
                       ))}
                     </div>
@@ -480,31 +482,35 @@ const App: React.FC = () => {
 
                   {/* KOLs */}
                   <div>
-                    <h3 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-12 text-center">
-                      KOLs
-                    </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <h3 className="text-2xl font-semibold mb-8 text-neutral-900 dark:text-white">KOLs</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                       {[
-                        { name: 'THORTrades', twitter: '@ThorTrades8', image: 'https://ui-avatars.com/api/?name=THORTrades&background=0D9488&color=fff' },
-                        { name: 'Coach Bruce', twitter: '@OX_DAO', image: 'https://ui-avatars.com/api/?name=Coach+Bruce&background=0D9488&color=fff' },
-                        { name: 'Saunders Nuggets', twitter: '@NuggetsNewsAU', image: 'https://ui-avatars.com/api/?name=Saunders+Nuggets&background=0D9488&color=fff' },
-                        { name: 'SliceX', twitter: '@SliceTank', image: 'https://ui-avatars.com/api/?name=SliceX&background=0D9488&color=fff' },
-                        { name: 'NCF', twitter: '@NoTableNoFun', image: 'https://ui-avatars.com/api/?name=NCF&background=0D9488&color=fff' },
-                        { name: 'Elroy ARC', twitter: '@icunucmi', image: 'https://ui-avatars.com/api/?name=Elroy+ARC&background=0D9488&color=fff' },
-                        { name: 'Mechanism Capital', twitter: '@MechanismCap', image: 'https://ui-avatars.com/api/?name=Mechanism+Capital&background=0D9488&color=fff' },
-                        { name: 'Wolf of Defi', twitter: '@thewolfofdefi', image: 'https://ui-avatars.com/api/?name=Wolf+of+Defi&background=0D9488&color=fff' },
-                        { name: 'Tyler Reynolds', twitter: '@tbr90', image: 'https://ui-avatars.com/api/?name=Tyler+Reynolds&background=0D9488&color=fff' },
+                        { name: 'THORTrades', twitter: 'ThorTrades8' },
+                        { name: 'Coach Bruce', twitter: 'OX_DAO' },
+                        { name: 'Saunders Nuggets', twitter: 'NuggetsNewsAU' },
+                        { name: 'SliceX', twitter: 'SliceTank' },
+                        { name: 'NCF', twitter: 'NoTableNoFun' },
+                        { name: 'Elroy ARC', twitter: 'icunucmi' },
+                        { name: 'Mechanism Capital', twitter: 'MechanismCap' },
+                        { name: 'Wolf of Defi', twitter: 'thewolfofdefi' },
+                        { name: 'Tyler Reynolds', twitter: 'tbr90' }
                       ].map((kol) => (
-                        <div key={kol.name} className="group bg-white dark:bg-neutral-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-gradient-to-b hover:from-white hover:to-primary-50 dark:hover:from-neutral-800 dark:hover:to-primary-900/10">
-                          <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-primary-100 dark:ring-primary-900/30 group-hover:ring-primary-200 dark:group-hover:ring-primary-800/50 transition-all duration-500">
+                        <div key={kol.name} className="group">
+                          <div className="relative aspect-square rounded-xl overflow-hidden bg-white dark:bg-neutral-800 shadow-lg hover:shadow-xl transition-all duration-300">
                             <img
-                              src={kol.image}
+                              src={`https://unavatar.io/twitter/${kol.twitter}`}
                               alt={kol.name}
-                              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                             />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                              <div className="text-white">
+                                <h4 className="font-semibold">{kol.name}</h4>
+                                <a href={`https://twitter.com/${kol.twitter}`} target="_blank" rel="noopener noreferrer" className="text-sm hover:underline">
+                                  @{kol.twitter}
+                                </a>
+                              </div>
+                            </div>
                           </div>
-                          <h4 className="font-semibold text-neutral-900 dark:text-white text-center group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">{kol.name}</h4>
-                          <p className="text-sm text-neutral-600 dark:text-neutral-300 text-center mt-2">{kol.twitter}</p>
                         </div>
                       ))}
                     </div>
