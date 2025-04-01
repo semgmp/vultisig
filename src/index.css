@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Brockmann';
+  src: url('/assets/fonts/Brockmann-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brockmann';
+  src: url('/assets/fonts/Brockmann-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brockmann';
+  src: url('/assets/fonts/Brockmann-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brockmann';
+  src: url('/assets/fonts/Brockmann-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@layer base {
+  html {
+    font-family: 'Brockmann', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-8 py-3 rounded-2xl hover:bg-primary-700 transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-white dark:bg-neutral-800 text-primary-600 px-8 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-neutral-50;
+  }
+}
