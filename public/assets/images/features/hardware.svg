@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(40, 40)">
+    <!-- Laptop -->
+    <path d="M20 30L80 30L100 50L40 50L20 30Z" fill="#4F46E5" fillOpacity="0.2"/>
+    <path d="M40 50L100 50L100 90L40 90L40 50Z" fill="#4F46E5" fillOpacity="0.3"/>
+    <path d="M30 90L110 90L120 100L20 100L30 90Z" fill="#4F46E5" fillOpacity="0.4"/>
+    
+    <!-- Phone -->
+    <path d="M90 40L110 50L110 80L90 70L90 40Z" fill="#06B6D4" fillOpacity="0.3"/>
+    <path d="M90 40L110 50L100 55L80 45L90 40Z" fill="#06B6D4" fillOpacity="0.4"/>
+    
+    <!-- Screen content -->
+    <rect x="45" y="60" width="50" height="20" rx="2" fill="#4F46E5" fillOpacity="0.8"/>
+    <rect x="95" y="55" width="10" height="15" rx="1" fill="#06B6D4" fillOpacity="0.8"/>
+  </g>
+</svg> 

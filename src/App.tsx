@@ -85,13 +85,81 @@ const App: React.FC = () => {
                 </div>
               </section>
 
+              {/* Why Choose Vultisig Section */}
+              <section className="py-20 bg-white dark:bg-gray-900">
+                <div className="container mx-auto px-4">
+                  <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Why Choose Vultisig</h2>
+                    <p className="text-xl text-gray-600 dark:text-gray-400">Secure, simple, and powerful multi-signature solution</p>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {/* Threshold Signatures */}
+                    <div className="group p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                      <div className="h-48 mb-6 relative overflow-hidden rounded-xl bg-primary-50 dark:bg-gray-700 flex items-center justify-center">
+                        <img
+                          src="/assets/images/features/threshold.svg"
+                          alt="Threshold Signatures"
+                          className="w-32 h-32 object-contain transform group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Threshold Signatures</h3>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Multiple devices to sign—no single point of failure. Never lose funds with one compromised device
+                      </p>
+                    </div>
+
+                    {/* Familiar Hardware */}
+                    <div className="group p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                      <div className="h-48 mb-6 relative overflow-hidden rounded-xl bg-primary-50 dark:bg-gray-700 flex items-center justify-center">
+                        <img
+                          src="/assets/images/features/hardware.svg"
+                          alt="Familiar Hardware"
+                          className="w-32 h-32 object-contain transform group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Familiar Hardware</h3>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Use your phone, laptop, or tablet—fast, secure, and hassle-free. No special devices needed.
+                      </p>
+                    </div>
+
+                    {/* Vault Shares */}
+                    <div className="group p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                      <div className="h-48 mb-6 relative overflow-hidden rounded-xl bg-primary-50 dark:bg-gray-700 flex items-center justify-center">
+                        <img
+                          src="/assets/images/features/vault.svg"
+                          alt="Vault Shares"
+                          className="w-32 h-32 object-contain transform group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Vault Shares</h3>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        No need to write down seed phrases. Store your Vault Shares online safely and respawn anywhere!
+                      </p>
+                    </div>
+
+                    {/* Rich UI */}
+                    <div className="group p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                      <div className="h-48 mb-6 relative overflow-hidden rounded-xl bg-primary-50 dark:bg-gray-700 flex items-center justify-center">
+                        <img
+                          src="/assets/images/features/ui.svg"
+                          alt="Rich UI"
+                          className="w-32 h-32 object-contain transform group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Rich UI</h3>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Have all information displayed on big screens. Easy to see—easy to understand
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
               {/* Features Section */}
               <section id="features" className="py-32 bg-neutral-50 dark:bg-neutral-800/50" aria-labelledby="features-heading">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="text-center">
-                    <h2 id="features-heading" className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-                      Why Choose Vultisig?
-                    </h2>
                     <p className="mt-6 text-xl text-neutral-600 dark:text-neutral-300">
                       Enterprise-grade security meets user-friendly design
                     </p>

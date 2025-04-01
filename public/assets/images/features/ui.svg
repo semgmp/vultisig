@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(40, 40)">
+    <!-- Device Frame -->
+    <path d="M20 30L100 30L120 50L40 50L20 30Z" fill="#4F46E5" fillOpacity="0.2"/>
+    <path d="M40 50L120 50L120 100L40 100L40 50Z" fill="#4F46E5" fillOpacity="0.3"/>
+    
+    <!-- UI Elements -->
+    <rect x="50" y="60" width="40" height="8" rx="2" fill="#06B6D4" fillOpacity="0.8"/>
+    <rect x="50" y="75" width="60" height="8" rx="2" fill="#06B6D4" fillOpacity="0.6"/>
+    <rect x="50" y="90" width="50" height="8" rx="2" fill="#06B6D4" fillOpacity="0.4"/>
+    
+    <!-- Decorative Elements -->
+    <circle cx="100" cy="40" r="5" fill="#06B6D4" fillOpacity="0.5"/>
+    <path d="M85 35L95 45M95 35L85 45" stroke="#4F46E5" strokeWidth="2"/>
+    
+    <!-- Orbit Lines -->
+    <path d="M30 40C40 30 80 30 90 40" stroke="#4F46E5" strokeWidth="2" strokeDasharray="4" fill="none"/>
+    <path d="M90 90C80 100 40 100 30 90" stroke="#4F46E5" strokeWidth="2" strokeDasharray="4" fill="none"/>
+  </g>
+</svg> 

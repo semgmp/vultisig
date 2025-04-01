@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(40, 40)">
+    <!-- Central Node -->
+    <path d="M60 40L80 50L60 60L40 50L60 40Z" fill="#4F46E5" fillOpacity="0.4"/>
+    <path d="M40 50L60 60L60 80L40 70L40 50Z" fill="#4F46E5" fillOpacity="0.5"/>
+    <path d="M60 60L80 50L80 70L60 80L60 60Z" fill="#4F46E5" fillOpacity="0.3"/>
+    
+    <!-- Connected Nodes -->
+    <path d="M20 20L40 30L20 40L0 30L20 20Z" fill="#06B6D4" fillOpacity="0.2"/>
+    <path d="M100 20L120 30L100 40L80 30L100 20Z" fill="#06B6D4" fillOpacity="0.2"/>
+    <path d="M20 80L40 90L20 100L0 90L20 80Z" fill="#06B6D4" fillOpacity="0.2"/>
+    <path d="M100 80L120 90L100 100L80 90L100 80Z" fill="#06B6D4" fillOpacity="0.2"/>
+    
+    <!-- Connection Lines -->
+    <line x1="30" y1="35" x2="50" y2="45" stroke="#4F46E5" strokeWidth="2" strokeDasharray="4"/>
+    <line x1="90" y1="35" x2="70" y2="45" stroke="#4F46E5" strokeWidth="2" strokeDasharray="4"/>
+    <line x1="30" y1="85" x2="50" y2="75" stroke="#4F46E5" strokeWidth="2" strokeDasharray="4"/>
+    <line x1="90" y1="85" x2="70" y2="75" stroke="#4F46E5" strokeWidth="2" strokeDasharray="4"/>
+  </g>
+</svg> 
